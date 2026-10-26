@@ -3,3 +3,4 @@ venv
 hw2/venv_hw2
 hw1/venv
 __pycache__
+.DS_Store
