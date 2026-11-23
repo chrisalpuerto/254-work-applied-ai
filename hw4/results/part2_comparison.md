@@ -1,0 +1,11 @@
+| Metric                          | Part 1: TF-IDF + MLP                      | Part 2: gpt-oss agent (zero-shot)                                                                                  |
+|:--------------------------------|:------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| Sample (stratified, seed 42)    | 200                                       | 200                                                                                                                |
+| Accuracy                        | 0.870                                     | 0.855                                                                                                              |
+| Macro precision                 | 0.870                                     | 0.869                                                                                                              |
+| Labeled training examples used  | 120,000                                   | 0 (instructions only)                                                                                              |
+| Avg latency per example         | 0.03 ms                                   | 2.25 s                                                                                                             |
+| Total evaluation time           | 0.01 s (+ ~65 s one-time training)        | 449.9 s                                                                                                            |
+| Invalid outputs (after 1 retry) | n/a                                       | 0 (0 needed retry)                                                                                                 |
+| Tokens (in / out)               | n/a                                       | 64,084 / 10,555                                                                                                    |
+| Cost / resources                | Free; trains and runs on a laptop CPU (no GPU), ~8.3M parameters | No price returned by the NRP Nautilus endpoint (no per-token billing for course access); cost reported as token usage. gpt-oss-120b (117B MoE, ~5.1B active) needs ~80 GB GPU memory |

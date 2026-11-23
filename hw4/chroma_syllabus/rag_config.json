@@ -1,0 +1,14 @@
+{
+  "pdf_file": "CPSC 254_SYL.pdf",
+  "pdf_sha256": "1d93dbdf0dac2bf536a7bb72717ac303d036081500183c1935a9be461cc061af",
+  "chunk_size": 800,
+  "chunk_overlap": 150,
+  "splitter": "RecursiveCharacterTextSplitter",
+  "embedding_model": "qwen3-embedding",
+  "collection": "cpsc254_syllabus",
+  "distance": "cosine",
+  "top_k": 4,
+  "chat_model": "gpt-oss",
+  "n_chunks": 22,
+  "built_at": "2026-11-23T23:23:02.653920+00:00"
+}

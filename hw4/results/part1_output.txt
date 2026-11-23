@@ -1,0 +1,196 @@
+
+==============================================================================
+PART 1 (1a-b): Load AG News and combine title + description
+==============================================================================
+torchtext AG_NEWS unavailable (ModuleNotFoundError: No module named 'torchtext').
+Falling back to the official AG News split in /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/data/*.jsonl
+Data source: local JSONL (official AG News v3 train/test split)
+Training examples: 120,000
+Test examples:     7,600
+
+==============================================================================
+PART 1 (1c): One example article per category
+==============================================================================
+
+[1: World]
+  Venezuelans Vote Early in Referendum on Chavez Rule (Reuters). Reuters - Venezuelans turned out early and in large numbers on Sunday to vote in a historic referendum that will either remove left-wing President Hugo Chavez from office or give him a new mandate to govern for the next two years.
+
+[2: Sports]
+  Phelps, Thorpe Advance in 200 Freestyle (AP). AP - Michael Phelps took care of qualifying for the Olympic 200-meter freestyle semifinals Sunday, and then found out he had been added to the American team for the evening's 400 freestyle relay final. Phelps' rivals Ian Thorpe and Pieter van den Hoogenband and teammate Klete Keller were faster than the teenager in the 200 free preliminaries.
+
+[3: Business]
+  Wall St. Bears Claw Back Into the Black (Reuters). Reuters - Short-sellers, Wall Street's dwindling band of ultra-cynics, are seeing green again.
+
+[4: Sci/Tech]
+  'Madden,' 'ESPN' Football Score in Different Ways (Reuters). Reuters - Was absenteeism a little high on Tuesday among the guys at the office? EA Sports would like to think it was because "Madden NFL 2005" came out that day, and some fans of the football simulation are rabid enough to take a sick day to play it.
+
+==============================================================================
+PART 1 (1c): Number of examples per category
+==============================================================================
+           Train  Test
+category              
+World      30000  1900
+Sports     30000  1900
+Business   30000  1900
+Sci/Tech   30000  1900
+Total     120000  7600
+
+==============================================================================
+PART 1 (1d-e): Document-term matrix (CountVectorizer) and TF-IDF matrix
+==============================================================================
+Both vectorizers are fit on TRAINING text only, then used to transform test text.
+Vectorizer settings: {'lowercase': True, 'token_pattern': '(?u)\\b\\w\\w+\\b'}, stop_words=None
+
+Training DTM shape (documents x features): 120,000 x 64,889
+Nonzero entries: 3,665,376
+Total entries:   7,786,680,000
+Sparsity: (1 - 3,665,376 / 7,786,680,000) x 100 = 99.9529%
+Average distinct terms per training document: 30.5
+Test DTM shape:  7,600 x 64,889
+TF-IDF train shape: 120,000 x 64,889 (sparsity 99.9529%)
+Memory if stored dense (float64): 62.3 GB vs. CSR sparse: 44.5 MB
+
+DTM vs TF-IDF cells for training document 0:
+  text: Wall St. Bears Claw Back Into the Black (Reuters). Reuters - Short-sellers, Wall Street's dwindling band of ultra-cynics, are seeing green again.
+  term 'wall        ' count = 2   tf-idf = 0.3451
+  term 'reuters     ' count = 2   tf-idf = 0.2004
+  term 'seeing      ' count = 1   tf-idf = 0.2420
+  term 'are         ' count = 1   tf-idf = 0.1117
+  term 'cynics      ' count = 1   tf-idf = 0.3387
+  term 'ultra       ' count = 1   tf-idf = 0.2598
+  term 'of          ' count = 1   tf-idf = 0.0496
+  term 'band        ' count = 1   tf-idf = 0.2338
+
+==============================================================================
+PART 1 (2): MLP classifier on CountVectorizer features
+==============================================================================
+Model: sklearn.neural_network.MLPClassifier
+  Input layer:      one unit per vocabulary term (bag-of-words counts)
+  Hidden layers:    1 hidden layer x 128 units, ReLU activation
+  Output layer:     4 units, softmax (multi-class)
+  Loss:             categorical cross-entropy (log-loss) + L2 penalty alpha=1e-4
+  Optimizer:        Adam, learning rate 0.001 (constant), betas (0.9, 0.999)
+  Batch size:       256
+  Epochs:           5 (max_iter=5, early_stopping=False)
+  random_state:     42, shuffle=True
+  Full parameter dict: {'hidden_layer_sizes': (128,), 'activation': 'relu', 'solver': 'adam', 'learning_rate_init': 0.001, 'batch_size': 256, 'max_iter': 5, 'alpha': 0.0001, 'shuffle': True, 'early_stopping': False, 'random_state': 42}
+
+--- CountVectorizer, no stop-word removal ---
+Features: 64,889 | epochs run: 5 | final training loss: 0.0456 | train time: 62.8s
+Test accuracy:          0.9095
+Test macro precision:   0.9097
+Confusion matrix (rows = true, cols = predicted):
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World           1709           53             64             74
+true Sports            24         1857             11              8
+true Business          68           14           1629            189
+true Sci/Tech          47           13            123           1717
+
+Macro-averaged precision = unweighted mean of the per-class precisions (each of the 4 classes counts equally).
+
+Per-class report:
+              precision    recall  f1-score   support
+
+       World     0.9248    0.8995    0.9120      1900
+      Sports     0.9587    0.9774    0.9679      1900
+    Business     0.8916    0.8574    0.8742      1900
+    Sci/Tech     0.8637    0.9037    0.8832      1900
+
+    accuracy                         0.9095      7600
+   macro avg     0.9097    0.9095    0.9093      7600
+weighted avg     0.9097    0.9095    0.9093      7600
+
+
+==============================================================================
+PART 1 (2): Misclassified test examples (CountVectorizer, no stop words)
+==============================================================================
+Misclassified: 688 of 7,600 test documents
+
+#1  test index 8
+  True: Sci/Tech  Predicted: World
+  Text: E-mail scam targets police chief. Wiltshire Police warns about "phishing" after its fraud squad chief was targeted.
+
+#2  test index 9
+  True: Sci/Tech  Predicted: Business
+  Text: Card fraud unit nets 36,000 cards. In its first two years, the UK's dedicated card fraud unit, has recovered 36,000 stolen cards and 171 arrests - and estimates it saved 65m.
+
+#3  test index 41
+  True: Business  Predicted: Sci/Tech
+  Text: Retailers Vie for Back-To-School Buyers (Reuters). Reuters - Apparel retailers are hoping their back-to-school fashions will make the grade among style-conscious teens and young adults this fall, but it could be a tough sell, with students and parents keeping a tighter hold on their wallets.
+
+#4  test index 55
+  True: Sci/Tech  Predicted: Sports
+  Text: Promoting a Shared Vision. As Michael Kaleko kept running into people who were getting older and having more vision problems, he realized he could do something about it.
+
+#5  test index 61
+  True: Sports    Predicted: World
+  Text: Haas and Cink Selected for Ryder Cup Team. Jay Haas joined Stewart Cink as the two captain's picks for a U.S. team that will try to regain the cup from Europe next month.
+
+#6  test index 79
+  True: World     Predicted: Sports
+  Text: Live: Olympics day four. Richard Faulds and Stephen Parry are going for gold for Great Britain on day four in Athens.
+
+#7  test index 120
+  True: World     Predicted: Business
+  Text: Oil prices bubble to record high. The price of oil has continued its sharp rise overnight, closing at a record high. The main contract in New York, light sweet crude for delivery next month, has closed at a record $US46.75 a barrel - up 70 cents on yesterday 's close.
+
+#8  test index 155
+  True: World     Predicted: Sci/Tech
+  Text: Future Doctors, Crossing Borders. Students at the Mount Sinai School of Medicine learn that diet and culture shape health in East Harlem.
+
+==============================================================================
+PART 1 (3): Compare feature representations and stop-word removal
+==============================================================================
+Same split, same MLP settings, each vectorizer fit on training text only.
+
+--- TfidfVectorizer, stop-word removal = No ---
+Features: 64,889 | epochs run: 5 | final training loss: 0.0724 | train time: 64.7s
+Test accuracy:          0.9113
+Test macro precision:   0.9113
+Confusion matrix (rows = true, cols = predicted):
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World           1708           55             76             61
+true Sports            24         1859             10              7
+true Business          66           13           1647            174
+true Sci/Tech          46           13            129           1712
+
+--- CountVectorizer, stop-word removal = Yes ---
+Features: 64,585 | epochs run: 5 | final training loss: 0.0433 | train time: 61.2s
+Test accuracy:          0.9088
+Test macro precision:   0.9090
+Confusion matrix (rows = true, cols = predicted):
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World           1715           45             81             59
+true Sports            24         1851             18              7
+true Business          60           13           1672            155
+true Sci/Tech          48           13            170           1669
+
+--- TfidfVectorizer, stop-word removal = Yes ---
+Features: 64,585 | epochs run: 5 | final training loss: 0.0729 | train time: 61.7s
+Test accuracy:          0.9105
+Test macro precision:   0.9108
+Confusion matrix (rows = true, cols = predicted):
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World           1707           48             83             62
+true Sports            24         1855             15              6
+true Business          63            9           1691            137
+true Sci/Tech          52           11            170           1667
+
+==============================================================================
+PART 1 (3): Summary table
+==============================================================================
+     Vectorizer Stop-word removal  # features  Test accuracy  Macro precision  Train time (s)
+CountVectorizer                No       64889         0.9095           0.9097            62.8
+TfidfVectorizer                No       64889         0.9113           0.9113            64.7
+CountVectorizer               Yes       64585         0.9088           0.9090            61.2
+TfidfVectorizer               Yes       64585         0.9105           0.9108            61.7
+
+Best configuration by test accuracy: TfidfVectorizer, stop-word removal = No
+Confusion matrix of the best configuration (rows = true, cols = predicted):
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World           1708           55             76             61
+true Sports            24         1859             10              7
+true Business          66           13           1647            174
+true Sci/Tech          46           13            129           1712
+
+All outputs saved to /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/results/

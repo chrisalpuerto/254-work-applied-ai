@@ -7,3 +7,4 @@ __pycache__
 hw3/venv_hw3
 .env
 hw3/.env
+hw2/.DS_Store

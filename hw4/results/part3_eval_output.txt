@@ -1,0 +1,87 @@
+==============================================================================
+CPSC 254 Syllabus RAG - evaluation run
+==============================================================================
+Reusing saved Chroma index: /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/chroma_syllabus/ (22 chunks, built 2026-11-23T23:23:02Z, embeddings 'qwen3-embedding')
+Chat model: gpt-oss | embeddings: qwen3-embedding | chunk_size=800, overlap=150, chunks=22, top_k=4
+
+------------------------------------------------------------------------------
+Q1: How is the final grade weighted between class participation and attendance, assignments, and exams?
+------------------------------------------------------------------------------
+ANSWER:
+Class participation and attendance: 7%  
+Assignments: 43%  
+Exams: 50%  
+
+[Excerpt 1 | page 3]
+
+RETRIEVED: p.3 (chunk 11, dist 0.157), p.2 (chunk 7, dist 0.325), p.3 (chunk 12, dist 0.350), p.2-3 (chunk 9, dist 0.397)
+REFERENCE (p. 3, 'Grading Policy' table): Class participation and attendance 7%, Assignments 43%, Exams 50% (total 100%); final grade is the weighted sum.
+KEY FACTS PRESENT: 3/3   | insufficient-info flag: False   | latency 3.8s
+
+------------------------------------------------------------------------------
+Q2: What are the instructor's office hours and where is the office?
+------------------------------------------------------------------------------
+ANSWER:
+Instructor office hours: Mon and Wed 2:15 pm – 4:00 pm and 5:15 pm – 5:30 pm, or by ZOOM appointment.  
+Office location: CS‑421. [Excerpt 1 | page 1]
+
+RETRIEVED: p.1 (chunk 2, dist 0.375), p.4 (chunk 17, dist 0.420), p.4-5 (chunk 19, dist 0.440), p.4 (chunk 18, dist 0.451)
+REFERENCE (p. 1, 'Instructor' / 'Office Hours'): Mon and Wed 2:15-4:00 pm and 5:15-5:30 pm, or by Zoom appointment; office CS-421.
+KEY FACTS PRESENT: 6/6   | insufficient-info flag: False   | latency 4.5s
+
+------------------------------------------------------------------------------
+Q3: What happens if I miss an exam with a valid, documented excuse, and what if I have no valid excuse?
+------------------------------------------------------------------------------
+ANSWER:
+- With a valid, documented excuse, the exam’s weight is added to the final exam weight (the exam is made up by increasing the final’s weight).  
+- Without a valid excuse, you receive a zero on the exam/quiz and the final exam weight does not change.  
+
+[Excerpt 1 | p. 2‑3]
+
+RETRIEVED: p.2-3 (chunk 9, dist 0.242), p.2 (chunk 5, dist 0.349), p.1 (chunk 4, dist 0.393), p.2 (chunk 8, dist 0.410)
+REFERENCE (p. 2, 'Exams' - Makeup policy): With a valid documented excuse (e.g., doctor's note) the weight of the final is increased by the weight of the missed exam; without one the exam score is zero and the final weight is unchanged.
+KEY FACTS PRESENT: 3/3   | insufficient-info flag: False   | latency 7.6s
+
+------------------------------------------------------------------------------
+Q4: What letter grade does a final score of 90% earn, and what is the minimum score for an A?
+------------------------------------------------------------------------------
+ANSWER:
+A final score of 90 % earns an **A‑**.  
+The minimum score required for an **A** is **92 %**.  
+[Excerpt 1 | p. 3] and [Excerpt 2 | p. 3] provide the grade thresholds.
+
+RETRIEVED: p.3 (chunk 11, dist 0.366), p.3 (chunk 12, dist 0.369), p.3 (chunk 10, dist 0.504), p.2-3 (chunk 9, dist 0.518)
+REFERENCE (p. 3, 'Grading Policy' - plus/minus scheme): 90% is the minimum for an A- (A- >= 90%); an A requires >= 92%.
+KEY FACTS PRESENT: 2/2   | insufficient-info flag: False   | latency 5.5s
+
+------------------------------------------------------------------------------
+Q5: Am I allowed to use AI tools such as large language models for assignments and during exams?
+------------------------------------------------------------------------------
+ANSWER:
+Yes, you may use AI tools (including LLMs) for completing assignments or projects, provided you understand the generated code and can show your contribution [Excerpt 1 p. 3].  
+No, AI tools are not allowed during exams unless a specific exception is announced, as exams are closed‑book and closed‑notes [Excerpt 1 p. 3].
+
+RETRIEVED: p.3 (chunk 13, dist 0.103), p.2 (chunk 8, dist 0.341), p.5 (chunk 20, dist 0.432), p.1 (chunk 0, dist 0.432)
+REFERENCE (p. 3, 'AI Use Policy'): AI tools are permitted/encouraged for assignments (e.g., writing code, rephrasing short answers) but you must understand submitted AI code; no AI tools during exams unless otherwise stated.
+KEY FACTS PRESENT: 3/3   | insufficient-info flag: False   | latency 5.3s
+
+------------------------------------------------------------------------------
+Q6 (not in syllabus): What is the due date for Assignment 4?
+------------------------------------------------------------------------------
+ANSWER:
+The syllabus does not contain enough information to answer this question. It does note that important dates such as campus closures, holidays, and the final exam schedule are available on the university’s Academic Calendar and the Final Exam Schedule page [p. 1].
+
+RETRIEVED: p.4-5 (chunk 19, dist 0.518), p.4 (chunk 17, dist 0.521), p.1 (chunk 3, dist 0.546), p.3 (chunk 13, dist 0.548)
+REFERENCE (p. 2, 'Assignments' (no dates given)): Not in the syllabus. It only says assignment details will be announced later. Expected behaviour: the NOT_ENOUGH_INFO response.
+KEY FACTS PRESENT: 1/1   | insufficient-info flag: True   | latency 5.3s
+
+==============================================================================
+Evaluated 6 questions in 32.1s (avg 5.4s per question)
+  Q1                     key facts 3/3   pages retrieved: 3, 2, 3, 2-3
+  Q2                     key facts 6/6   pages retrieved: 1, 4, 4-5, 4
+  Q3                     key facts 3/3   pages retrieved: 2-3, 2, 1, 2
+  Q4                     key facts 2/2   pages retrieved: 3, 3, 3, 2-3
+  Q5                     key facts 3/3   pages retrieved: 3, 2, 5, 1
+  Q6 (not in syllabus)   key facts 1/1   pages retrieved: 4-5, 4, 1, 3
+
+Saved /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/results/part3_eval.json and part3_eval_output.txt

@@ -1,0 +1,20 @@
+# Part 1 (topic_classifier.py)
+scikit-learn>=1.4
+numpy
+pandas
+scipy
+matplotlib
+tabulate
+joblib
+
+# Parts 2-3 (classification_agent.py, rag.py, rag_eval.py)
+python-dotenv>=1.0
+openai>=1.40
+pydantic>=2.0
+langchain>=1.0          # create_agent
+langchain-core>=1.0
+langchain-openai>=1.0   # ChatOpenAI / OpenAIEmbeddings against the Nautilus endpoint
+langchain-text-splitters>=1.0
+langchain-chroma>=1.0
+chromadb>=1.0
+pypdf>=5.0

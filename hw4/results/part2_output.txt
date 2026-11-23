@@ -1,0 +1,176 @@
+torchtext AG_NEWS unavailable (ModuleNotFoundError: No module named 'torchtext').
+Falling back to the official AG News split in /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/data/*.jsonl
+Test data source: local JSONL (official AG News v3 train/test split)
+Stratified sample: n = 200 (random_state = 42); per class: World=50, Sports=50, Business=50, Sci/Tech=50
+torchtext AG_NEWS unavailable (ModuleNotFoundError: No module named 'torchtext').
+Falling back to the official AG News split in /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/data/*.jsonl
+Training the Part 1 model (TF-IDF, no stop-word removal, MLP 128 ReLU, 5 epochs)...
+Part 1 model: trained in 64s and cached
+
+Agent: LangChain create_agent, model 'gpt-oss' at https://ellm.nrp-nautilus.io/v1, temperature=0, reasoning_effort=low
+   25/200  agent acc so far 0.840  avg latency 1.83s
+   50/200  agent acc so far 0.860  avg latency 1.66s
+   75/200  agent acc so far 0.813  avg latency 1.69s
+  100/200  agent acc so far 0.810  avg latency 1.93s
+  125/200  agent acc so far 0.840  avg latency 2.04s
+  150/200  agent acc so far 0.860  avg latency 2.12s
+  175/200  agent acc so far 0.863  avg latency 2.21s
+  200/200  agent acc so far 0.855  avg latency 2.25s
+
+==============================================================================
+RESULTS
+==============================================================================
+Sample size: 200
+Part 1 MLP accuracy: 0.8700   macro precision: 0.8702
+Agent accuracy:      0.8550   macro precision: 0.8689
+Agent invalid outputs after retry: 0; examples needing a retry: 0
+Agent latency: mean 2.25s, median 2.03s, max 8.53s; total 449.9s
+Part 1 inference: 0.007s total (0.03 ms/example)
+Agent tokens: input 64,084, output 10,555 (of which reasoning 2,623)
+
+Part 1 confusion matrix:
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World             43            2              4              1
+true Sports             1           47              2              0
+true Business           1            1             40              8
+true Sci/Tech           3            1              2             44
+
+Agent confusion matrix:
+               pred World  pred Sports  pred Business  pred Sci/Tech
+true World             44            1              5              0
+true Sports             1           48              1              0
+true Business           0            1             46              3
+true Sci/Tech           5            0             12             33
+
+Disagreement: agent-only errors 14, Part1-only errors 11, both wrong 15
+
+Agent errors with justifications:
+
+  [test 3077] true=Business agent=Sports part1=Sports
+  text: Brewers buyer expected to step out of the shadows Monday. MILWAUKEE - Paul Attanasio says the story of his brother buying a baseball team is like a script straight out of Hollywood. He should know.
+  justification: Mentions purchase of a baseball team, referencing the Brewers and sports ownership.
+
+  [test 2828] true=Business agent=Sci/Tech part1=Sci/Tech
+  text: IBM Claims Its BlueGene Supercomputer Is the Fastest. IBM Corp. on Wednesday said it has developed the world 's fastest computer - a 16,000-processor version of its BlueGene/L supercomputer.
+  justification: Mentions IBM's BlueGene supercomputer and its record speed, focusing on computing technology.
+
+  [test 7129] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: PayPal and Apple iTunes link-up. Online auction house eBay 's payment system PayPal can now be used for purchases by US customers of Apple 's iTunes music store.
+  justification: Mentions PayPal, Apple iTunes, and eBay payment system, focusing on corporate partnership and online transactions.
+
+  [test 4921] true=Sci/Tech agent=World part1=World
+  text: The Great Vegetarian Scam. Ive written before about my struggle to remain a vegetarian on Tuesday - when I abjure meat for religious reasons -hile travelling.
+  justification: Discusses personal vegetarian struggle, relating to cultural/religious practices and travel, fitting broader societal issues
+
+  [test 4744] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: When Wireless Networks Merge. Now that its $41 billion takeover of AT T Wireless has been completed, Cingular will spend hundreds of millions of dollars in coming weeks on its advertising campaign.
+  justification: Mentions $41 billion takeover, advertising spend, and corporate merger in telecom industry.
+
+  [test 6734] true=World agent=Business part1=Business
+  text: Turkey eyes $15 billion investment years. ANKARA: Turkey is hoping to attract $15 billion of foreign investment between 2005 and 2007 through reforms designed to overhaul its economy and ease the country 's entry into
+  justification: Discusses Turkey's plan to attract $15 billion foreign investment and economic reforms.
+
+  [test 930] true=World agent=Business part1=Business
+  text: Iraqi oil exports slump: report. NEAR daily attacks on pipelines and pumping stations had pushed down Iraq 's oil exports to their lowest point in nearly a year, Britain 's Financial Times newspaper reported today.
+  justification: Discusses Iraq's oil export decline affecting the energy market and economy.
+
+  [test 1773] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Consumer Group Calls for Probe of 'Rip-Off ' ITunes. Apple Computer Corp. is charging its British iTunes customers 17 percent more per download than its European customers, a consumer watchdog group said on Wednesday.
+  justification: Article discusses Apple pricing practices and consumer watchdog concerns, focusing on corporate pricing and consumer protection.
+
+  [test 4580] true=Business agent=Sci/Tech part1=Sci/Tech
+  text: FaceTime, IMlogic Back Live Communications Server 2005. Hard on the heels of Microsoft announcing that it 's taken Live Communications Server 2005 gold, instant messaging management software vendors IMlogic and FaceTime 
+  justification: Mentions Microsoft Live Communications Server 2005 and IM software vendors, focusing on technology products.
+
+  [test 7461] true=Sci/Tech agent=World part1=World
+  text: Clarke takes charge of Blunkett's Fear Agenda. Analysis Horizontal drinkers rejoice
+  justification: Mentions political figures Clarke and Blunkett and a fear agenda, indicating political news.
+
+  [test 1712] true=Sports agent=Business part1=Business
+  text: Tyncastle sale gets official go ahead. Of the votes received by proxy and from shareholders in the room at a stormy extraordinary general meeting last night, 62.5 were in favour of the resolution.
+  justification: Discusses a corporate sale approved by shareholders at an extraordinary general meeting
+
+  [test 5324] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Conversion Rates Between PPC (Paid) and Organic (Free) Results. Conversion Rates Between PPC (Paid) and Organic (Free) Results In a thread over at Cre8asite Forums named Organic vs Paid traffic ROI?, there is a discussio
+  justification: Discusses paid vs organic traffic conversion rates and ROI, focusing on marketing and online advertising metrics.
+
+  [test 2053] true=World agent=Business part1=Business
+  text: EU transport chief hails Alitalia accord (AFP). AFP - EU transport and energy commissioner Loyola de Palacio hailed the accord reached between Alitalia management and staff on a major restructuring plan aimed at keeping 
+  justification: Discusses airline restructuring agreement, involving management, staff, and EU transport official, focusing on corporate and economic aspects.
+
+  [test 1024] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Dell Debuts Color Laser Printers. Three new models are designed for businesses and home office users.
+  justification: Focus on new Dell laser printers targeting business and home office markets
+
+  [test 4194] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Apple iTunes Store Cost Varies. Apple Computer (NASDAQ: AAPL) recently launched its Apple iTunes Store in Canada. But is a website really a store when all the company appears to be doing is charging different rates in ea
+  justification: Discusses Apple iTunes Store pricing differences and market strategy, focusing on a company's commercial activity.
+
+  [test 586] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Gartner: Q2 server shipments rise on Sun, Dell strength. Server shipments and revenue increased in the second quarter, with low-cost servers based on Linux or the Windows operating system growing faster than their Unix c
+  justification: Discusses server shipment volumes and revenue growth for tech companies, a market/industry business report.
+
+  [test 528] true=World agent=Business part1=Business
+  text: Update 1: Passengers Stranded by Canceled Flights. Thousands of disgruntled vacationers were stranded at Heathrow Airport Tuesday after British Airways canceled scores of flights because of staff shortages and technical 
+  justification: Focus on airline cancellations, staff shortages, and operational issues affecting passengers
+
+  [test 545] true=Sci/Tech agent=World part1=Sci/Tech
+  text: Barents Sea Under Threat from Fishing, Oil (Reuters). Reuters - The Arctic Barents Sea is under threat from overfishing, oil and gas exploration and Soviet-era radioactive waste, the U.N. Environment Program said on Tues
+  justification: Article discusses UN report on threats to the Barents Sea, involving overfishing, oil, and radioactive waste, a geopolitical environmental issue.
+
+  [test 7306] true=Sci/Tech agent=World part1=Sci/Tech
+  text: US Supreme Court To Hear File-Sharing Case. WASHINGTON -- The US Supreme Court will take up one of the key arguments about the use of file-sharing services. The justices will consider whether peer-to-peer Internet file-s
+  justification: Supreme Court hearing on file-sharing law involves government and legal policy.
+
+  [test 543] true=Sci/Tech agent=World part1=Sci/Tech
+  text: EPA: U.S. Waterways Contain Polluted Fish (AP). AP - One of every three lakes in the United States, and nearly one-quarter of the nation's rivers contain enough pollution that people should limit or avoid eating fish cau
+  justification: EPA report on polluted U.S. waterways and fish consumption advice highlights environmental health and government action.
+
+  [test 3661] true=World agent=Sports part1=Sports
+  text: Cricket: Tendulkar to miss test. Sachin Tendulkar is almost certain to miss Thursday's second Test against Australia in Madras.
+  justification: Mentions cricket and a test match involving Sachin Tendulkar, a sports event.
+
+  [test 24] true=Sci/Tech agent=Business part1=Business
+  text: Rivals Try to Turn Tables on Charles Schwab. By MICHAEL LIEDTKE SAN FRANCISCO (AP) -- With its low prices and iconoclastic attitude, discount stock broker Charles Schwab Corp. (SCH) represented an annoying stone in Wall 
+  justification: Discusses Charles Schwab, a discount stock broker, and competition on Wall Street, focusing on finance and markets.
+
+  [test 5425] true=Sports agent=World part1=Sports
+  text: Mayor sure of ballpark support. DC Mayor Anthony A. Williams said yesterday he is "very confident " that he has the seven necessary votes from the DC Council for his plan to build a ballpark near South Capitol Street Sou
+  justification: Article discusses a mayor's confidence in council votes for a ballpark, focusing on local government politics.
+
+  [test 1814] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: BTG hits Amazon, Netflix and others with patent suit. BTG, a London-based firm that focuses on intellectual property and technology commercialization, filed suit against Amazon.com, Barnesandnoble.com and two other Inter
+  justification: Article reports a patent lawsuit by a firm against major internet companies, focusing on intellectual property and commercial litigation.
+
+  [test 2625] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Cray promotes two execs. Ly-Huong Pham becomes the supercomputer maker's senior vice president of operations, and Peter Ungaro is made senior vice president for sales, marketing and services.
+  justification: Article reports corporate executive promotions at supercomputer maker Cray, a business news item.
+
+  [test 6794] true=World agent=Business part1=Sports
+  text: HAYLEY MICK:. Hayley Mick is a journalist currently based in Vancouver. She has broadcast experience with CBC Radio 's Quirks and Quarks and has reported for the Vancouver Sun, CBC Online, and the Canadian Press 's Ontar
+  justification: Article describes a journalist's career and media outlets, focusing on the news industry.
+
+  [test 23] true=Sci/Tech agent=Business part1=Business
+  text: Some People Not Eligible to Get in on Google IPO. Google has billed its IPO as a way for everyday people to get in on the process, denying Wall Street the usual stranglehold it's had on IPOs. Public bidding, a minimum of
+  justification: Discusses Google IPO, public participation, underwriters, and share eligibility, focusing on financial market processes.
+
+  [test 7492] true=Business agent=Sci/Tech part1=Sci/Tech
+  text: FCC Mulls Airborne Mobile Phone Use. Although there may have been technical limitations at the time the cell phone ban was established, according to IDC 's Shiv Bakhshi, it is unclear why the ban has remained in place, g
+  justification: Discusses FCC regulations and technical aspects of airborne mobile phone usage.
+
+  [test 6126] true=Sci/Tech agent=Business part1=Sci/Tech
+  text: Barrett: Good business models vary widely. BANGALORE, INDIA - Peer-to-peer (P2P) sharing would never have gathered momentum if the music industry had adopted models for distribution over the Internet, said Intel Corp. Ch
+  justification: Discusses business models and industry impact of internet distribution, featuring Intel CEO remarks.
+
+                         Metric                      Part 1: TF-IDF + MLP                                                                                  Part 2: gpt-oss agent (zero-shot)
+   Sample (stratified, seed 42)                                       200                                                                                                                200
+                       Accuracy                                     0.870                                                                                                              0.855
+                Macro precision                                     0.870                                                                                                              0.869
+ Labeled training examples used                                   120,000                                                                                              0 (instructions only)
+        Avg latency per example                                   0.03 ms                                                                                                             2.25 s
+          Total evaluation time        0.01 s (+ ~65 s one-time training)                                                                                                            449.9 s
+Invalid outputs (after 1 retry)                                       n/a                                                                                                 0 (0 needed retry)
+              Tokens (in / out)                                       n/a                                                                                                    64,084 / 10,555
+               Cost / resources Free; trains and runs on a laptop CPU (no GPU), ~8.3M parameters No price returned by the NRP Nautilus endpoint (no per-token billing for course access); cost reported as token usage. gpt-oss-120b (117B MoE, ~5.1B active) needs ~80 GB GPU memory
+
+Saved results to /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/results/

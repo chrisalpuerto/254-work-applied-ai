@@ -1,0 +1,291 @@
+[
+  {
+    "id": "Q1",
+    "question": "How is the final grade weighted between class participation and attendance, assignments, and exams?",
+    "reference": "Class participation and attendance 7%, Assignments 43%, Exams 50% (total 100%); final grade is the weighted sum.",
+    "evidence": "p. 3, 'Grading Policy' table",
+    "key_facts": [
+      [
+        "7%",
+        "7 %"
+      ],
+      [
+        "43%",
+        "43 %"
+      ],
+      [
+        "50%",
+        "50 %"
+      ]
+    ],
+    "answer": "Class participation and attendance: 7%  \nAssignments: 43%  \nExams: 50%  \n\n[Excerpt 1 | page 3]",
+    "insufficient_info": false,
+    "sources": [
+      {
+        "chunk_id": 11,
+        "pages": "3",
+        "distance": 0.1568,
+        "text": "Grading Policy \nYour grade will be determined by several of your activities, as shown below. \n\nClass activities Weights in Percentage \nClass participation and attendance 7% \nAssignments 43% \nExams 50% \nTotal 100% \n\n* The final grade is computed by weighted sum, ∑ 𝑤𝑤𝑖𝑖𝑥𝑥𝑖𝑖, where 𝑤𝑤𝑖𝑖 is the weight shown in the \nabove table and 𝑥𝑥𝑖𝑖 is your score on the basis of the 100 percentile. Letter grades will be assigned \nusing the plus/minus scheme as follows (>= indicates the range minimum): \n\n A: >= 92% A-: >= 90% \nB+: >= 87% B: >= 82% B-: >= 80% \nC+: >= 77% C: >= 72% C-: >= 70% \nD+: >= 67% D: >= 62% D-: >= 60%"
+      },
+      {
+        "chunk_id": 7,
+        "pages": "2",
+        "distance": 0.3248,
+        "text": "Students who complete at least 50% of the pop quizzes or class activities administered without \nprior announcement will receive 70% of the full credit. Additional completion will increase the \ncredit proportionally, up to full credits for participation and attendance. There will be no make-\nup pop quizzes or class activities. \n\nAssignments \nThere will be multiple assignments. D etailed information about assignments /projects will be \nannounced later. The grade is based strictly on the quality of the work that shows understanding \nand applicability of the materials, not based on the \"hard work component.\""
+      },
+      {
+        "chunk_id": 12,
+        "pages": "3",
+        "distance": 0.3503,
+        "text": "A: >= 92% A-: >= 90% \nB+: >= 87% B: >= 82% B-: >= 80% \nC+: >= 77% C: >= 72% C-: >= 70% \nD+: >= 67% D: >= 62% D-: >= 60% \n\n*Grades may be assigned by your performance relative to the class average, especially when the \nclass average is low (e.g., < 80). However, no one will be penalized if the class as a whole does \nexcellent work. If given, the weight of bonus work or quiz may be determined by me, \nconsidering the class average within 5% of the overall score."
+      },
+      {
+        "chunk_id": 9,
+        "pages": "2-3",
+        "distance": 0.3965,
+        "text": "Makeup policy: If you are absent from the e xam and have a valid and documented excuse (e.g., \nDoctor’s note), such as an illness, a death in your family, or another equally compelling reason, \nthe weight of your final will be increased by the weight of the exam. Without a valid excuse, you \nwill receive a zero score for the exam/quiz, and the final weight will remain unchanged. \n\nFinal exam \nNo final exam\n\nBonus work may be given only when necessary. However, after the last day of the class, no \nextra work will be given to raise your scores."
+      }
+    ],
+    "latency_s": 3.84,
+    "key_facts_found": "3/3"
+  },
+  {
+    "id": "Q2",
+    "question": "What are the instructor's office hours and where is the office?",
+    "reference": "Mon and Wed 2:15-4:00 pm and 5:15-5:30 pm, or by Zoom appointment; office CS-421.",
+    "evidence": "p. 1, 'Instructor' / 'Office Hours'",
+    "key_facts": [
+      [
+        "CS-421",
+        "CS 421"
+      ],
+      [
+        "2:15"
+      ],
+      [
+        "4:00"
+      ],
+      [
+        "5:15"
+      ],
+      [
+        "5:30"
+      ],
+      [
+        "zoom"
+      ]
+    ],
+    "answer": "Instructor office hours: Mon and Wed 2:15 pm – 4:00 pm and 5:15 pm – 5:30 pm, or by ZOOM appointment.  \nOffice location: CS‑421. [Excerpt 1 | page 1]",
+    "insufficient_info": false,
+    "sources": [
+      {
+        "chunk_id": 2,
+        "pages": "1",
+        "distance": 0.3754,
+        "text": "Instructor: Christopher Ryu, Ph.D. \n Office: CS-421 Phone: (657) 278-7231 \n Email: tryu@fullerton.edu \n\nOffice Hours: Mon and Wed 2:15 pm – 4:00 pm and 5:15pm – 5:30 pm or ZOOM appointment \n\nTextbook, lecture notes, and course materials \n• No textbook is required. \n• Lecture notes and supplemental materials will be posted."
+      },
+      {
+        "chunk_id": 17,
+        "pages": "4",
+        "distance": 0.4204,
+        "text": "Student information for course syllabus \nhttps://fdc.fullerton.edu/teaching/student-info-syllabi.html \n\nTechnical Support \nIn case of technical problems with the learning management system, please contact the help desk \nat (657) 278-8888."
+      },
+      {
+        "chunk_id": 19,
+        "pages": "4-5",
+        "distance": 0.4404,
+        "text": "Emergency Policy (earthquakes, fire, etc.) \nFor your own safety and the safety of others, each student is expected to read and understand the \nguidelines \npublished at «http://prepare.fullerton.edu/campuspreparedness/ ». Should an emergency occur, \nfollow the \ninstructions given to you by faculty, staff, and public safety officials. An emergency information \nrecording is available by calling the Campus Operation and Emergency Closure line at 657- 278-\n4444.\n\nTentative Lecture Schedule \n\nA tentative schedule (\"subject to change\") for this class is shown below:"
+      },
+      {
+        "chunk_id": 18,
+        "pages": "4",
+        "distance": 0.4507,
+        "text": "Disabled Student Services \nThe University requires students with disabilities to register with the Office of Disabled Student \nServices (DSS) within the first week of classes. The office of Disability Support Services ' \nwebsite is http://www.fullerton.edu/DSS/ . They can be reached by phone at (657) 278- 3117 or \nTDD at 657-278-2786. Their email address is dsservices@fullerton.edu. Their office is located in \nUniversity Hall, room 101. Students requesting accommodations should inform the instructor \nduring the first week of classes about any disability or special needs that may require specific \narrangements/accommodations related to attending class sessions, completing course \nassignments, writing papers or quizzes/tests/examinations.\""
+      }
+    ],
+    "latency_s": 4.5,
+    "key_facts_found": "6/6"
+  },
+  {
+    "id": "Q3",
+    "question": "What happens if I miss an exam with a valid, documented excuse, and what if I have no valid excuse?",
+    "reference": "With a valid documented excuse (e.g., doctor's note) the weight of the final is increased by the weight of the missed exam; without one the exam score is zero and the final weight is unchanged.",
+    "evidence": "p. 2, 'Exams' - Makeup policy",
+    "key_facts": [
+      [
+        "final"
+      ],
+      [
+        "weight"
+      ],
+      [
+        "zero",
+        " 0 "
+      ]
+    ],
+    "answer": "- With a valid, documented excuse, the exam’s weight is added to the final exam weight (the exam is made up by increasing the final’s weight).  \n- Without a valid excuse, you receive a zero on the exam/quiz and the final exam weight does not change.  \n\n[Excerpt 1 | p. 2‑3]",
+    "insufficient_info": false,
+    "sources": [
+      {
+        "chunk_id": 9,
+        "pages": "2-3",
+        "distance": 0.2421,
+        "text": "Makeup policy: If you are absent from the e xam and have a valid and documented excuse (e.g., \nDoctor’s note), such as an illness, a death in your family, or another equally compelling reason, \nthe weight of your final will be increased by the weight of the exam. Without a valid excuse, you \nwill receive a zero score for the exam/quiz, and the final weight will remain unchanged. \n\nFinal exam \nNo final exam\n\nBonus work may be given only when necessary. However, after the last day of the class, no \nextra work will be given to raise your scores."
+      },
+      {
+        "chunk_id": 5,
+        "pages": "2",
+        "distance": 0.3494,
+        "text": "to the last three weeks of instruction shall be granted for only the most serious reasons. A serious \nreason is defined as a physical, medical, emotional, or other condition that has the effect of \nlimiting the student's full participation in the class…. The reason must be documented by the \nstudent….\" The new University Policy also states specifically that \"poor academic performance \nis NOT evidence of a serious reason for withdrawal.\""
+      },
+      {
+        "chunk_id": 4,
+        "pages": "1",
+        "distance": 0.3931,
+        "text": "Administrative drops \nAny student who misses the first two consecutive class meetings may be dropped from this class \nunless he/she contacts the instructor or the Computer Science department within 24 hours. \nDrop policy \nA new university withdrawal policy went into effect beginning the spring 1997 semester (UPS \n300.016). The policy \"stipulates that authorization to withdraw after the second week and prior"
+      },
+      {
+        "chunk_id": 8,
+        "pages": "2",
+        "distance": 0.4098,
+        "text": "Third-party work (code, artwork, etc.) may not be used in student work without prior instructor \nconsent. Failure to gain and document instructor consent will be construed as willful academic \ndishonesty. When a third party's work is incorporated into student work after gaining instructor \nconsent, failure to wholly document the work's origin, copyright and license will be construed as \nwillful academic \ndishonesty. \n\nExams \nThere will be multiple exams to measure individual performance on major topics discussed. \nExam questions may include all types, such as T/F, multiple choice, short answer, etc. All exams \nwill be closed books and notes."
+      }
+    ],
+    "latency_s": 7.62,
+    "key_facts_found": "3/3"
+  },
+  {
+    "id": "Q4",
+    "question": "What letter grade does a final score of 90% earn, and what is the minimum score for an A?",
+    "reference": "90% is the minimum for an A- (A- >= 90%); an A requires >= 92%.",
+    "evidence": "p. 3, 'Grading Policy' - plus/minus scheme",
+    "key_facts": [
+      [
+        "A-"
+      ],
+      [
+        "92"
+      ]
+    ],
+    "answer": "A final score of 90 % earns an **A‑**.  \nThe minimum score required for an **A** is **92 %**.  \n[Excerpt 1 | p. 3] and [Excerpt 2 | p. 3] provide the grade thresholds.",
+    "insufficient_info": false,
+    "sources": [
+      {
+        "chunk_id": 11,
+        "pages": "3",
+        "distance": 0.3662,
+        "text": "Grading Policy \nYour grade will be determined by several of your activities, as shown below. \n\nClass activities Weights in Percentage \nClass participation and attendance 7% \nAssignments 43% \nExams 50% \nTotal 100% \n\n* The final grade is computed by weighted sum, ∑ 𝑤𝑤𝑖𝑖𝑥𝑥𝑖𝑖, where 𝑤𝑤𝑖𝑖 is the weight shown in the \nabove table and 𝑥𝑥𝑖𝑖 is your score on the basis of the 100 percentile. Letter grades will be assigned \nusing the plus/minus scheme as follows (>= indicates the range minimum): \n\n A: >= 92% A-: >= 90% \nB+: >= 87% B: >= 82% B-: >= 80% \nC+: >= 77% C: >= 72% C-: >= 70% \nD+: >= 67% D: >= 62% D-: >= 60%"
+      },
+      {
+        "chunk_id": 12,
+        "pages": "3",
+        "distance": 0.369,
+        "text": "A: >= 92% A-: >= 90% \nB+: >= 87% B: >= 82% B-: >= 80% \nC+: >= 77% C: >= 72% C-: >= 70% \nD+: >= 67% D: >= 62% D-: >= 60% \n\n*Grades may be assigned by your performance relative to the class average, especially when the \nclass average is low (e.g., < 80). However, no one will be penalized if the class as a whole does \nexcellent work. If given, the weight of bonus work or quiz may be determined by me, \nconsidering the class average within 5% of the overall score."
+      },
+      {
+        "chunk_id": 10,
+        "pages": "3",
+        "distance": 0.504,
+        "text": "Bonus work may be given only when necessary. However, after the last day of the class, no \nextra work will be given to raise your scores. \n\nCheck all your scores before the semester is over. \n*For every assignment and project you have turned in and e xam you have taken, the record will \nbe posted on the class page. You are responsible for checking your record. If you find any \ndiscrepancy on your record, you need to let me know about it as soon as possible (at least \nBEFORE the final grade is given ). I strongly recommend that you keep all your records of \nyour work with the timestamp until you receive your final grade. \n\nGrading Policy \nYour grade will be determined by several of your activities, as shown below."
+      },
+      {
+        "chunk_id": 9,
+        "pages": "2-3",
+        "distance": 0.5183,
+        "text": "Makeup policy: If you are absent from the e xam and have a valid and documented excuse (e.g., \nDoctor’s note), such as an illness, a death in your family, or another equally compelling reason, \nthe weight of your final will be increased by the weight of the exam. Without a valid excuse, you \nwill receive a zero score for the exam/quiz, and the final weight will remain unchanged. \n\nFinal exam \nNo final exam\n\nBonus work may be given only when necessary. However, after the last day of the class, no \nextra work will be given to raise your scores."
+      }
+    ],
+    "latency_s": 5.49,
+    "key_facts_found": "2/2"
+  },
+  {
+    "id": "Q5",
+    "question": "Am I allowed to use AI tools such as large language models for assignments and during exams?",
+    "reference": "AI tools are permitted/encouraged for assignments (e.g., writing code, rephrasing short answers) but you must understand submitted AI code; no AI tools during exams unless otherwise stated.",
+    "evidence": "p. 3, 'AI Use Policy'",
+    "key_facts": [
+      [
+        "permitted",
+        "encouraged",
+        "allowed"
+      ],
+      [
+        "exam"
+      ],
+      [
+        "understand"
+      ]
+    ],
+    "answer": "Yes, you may use AI tools (including LLMs) for completing assignments or projects, provided you understand the generated code and can show your contribution [Excerpt 1 p. 3].  \nNo, AI tools are not allowed during exams unless a specific exception is announced, as exams are closed‑book and closed‑notes [Excerpt 1 p. 3].",
+    "insufficient_info": false,
+    "sources": [
+      {
+        "chunk_id": 13,
+        "pages": "3",
+        "distance": 0.1032,
+        "text": "AI Use Policy \nIn this course, the use of AI tools, such as Large Language Models (LLMs), is permitted or \nencouraged for completing assignments/projects, e.g., writing code and rephrasing short answers. \nHowever, you should understand any AI-generated code you submit and be able to demonstrate \nyour contribution to the assignment. No AI tools are allowed during exams unless otherwise \nstated, since exams are intended to evaluate your understanding of the material."
+      },
+      {
+        "chunk_id": 8,
+        "pages": "2",
+        "distance": 0.341,
+        "text": "Third-party work (code, artwork, etc.) may not be used in student work without prior instructor \nconsent. Failure to gain and document instructor consent will be construed as willful academic \ndishonesty. When a third party's work is incorporated into student work after gaining instructor \nconsent, failure to wholly document the work's origin, copyright and license will be construed as \nwillful academic \ndishonesty. \n\nExams \nThere will be multiple exams to measure individual performance on major topics discussed. \nExam questions may include all types, such as T/F, multiple choice, short answer, etc. All exams \nwill be closed books and notes."
+      },
+      {
+        "chunk_id": 20,
+        "pages": "5",
+        "distance": 0.4316,
+        "text": "Weeks Topics \nArtificial Intelligence (AI) \n1–2 An overview of artificial intelligence \nAI capabilities and real-world applications \nThe impacts of AI on society: social and ethical issues \nHigh-Performance Computing \n2–3 Computing fundamentals, coding tools and environment, and open-source projects \nReview of basic Python programming \nHigh-performance computing for AI applications \nMachine Learning and Deep Learning \n4–7 An overview of machine learning, reinforcement learning, and deep learning \nArtificial Neural Networks: Perceptron, MLP, Convolutional Neural Networks (CNNs) \nComputer vision : Image classification, object detection and recognition, face \nrecognition, digit and character recognition from images \nNatural Language Processing (NLP) and Large Language Models (LLMs)"
+      },
+      {
+        "chunk_id": 0,
+        "pages": "1",
+        "distance": 0.4322,
+        "text": "Applied Artificial Intelligence (CPSC 254) \n\nCatalog Course Description \nConcepts of modern Artificial Intelligence (AI), AI capabilities and their applications, societal \nimpacts, and ethical considerations. Identification of domain-specific problems and development \nof solutions using AI and computing technologies, including modern open-source projects and \ntools."
+      }
+    ],
+    "latency_s": 5.34,
+    "key_facts_found": "3/3"
+  },
+  {
+    "id": "Q6 (not in syllabus)",
+    "question": "What is the due date for Assignment 4?",
+    "reference": "Not in the syllabus. It only says assignment details will be announced later. Expected behaviour: the NOT_ENOUGH_INFO response.",
+    "evidence": "p. 2, 'Assignments' (no dates given)",
+    "key_facts": [
+      [
+        "the syllabus does not contain enough information to answer this question."
+      ]
+    ],
+    "answer": "The syllabus does not contain enough information to answer this question. It does note that important dates such as campus closures, holidays, and the final exam schedule are available on the university’s Academic Calendar and the Final Exam Schedule page [p. 1].",
+    "insufficient_info": true,
+    "sources": [
+      {
+        "chunk_id": 19,
+        "pages": "4-5",
+        "distance": 0.5181,
+        "text": "Emergency Policy (earthquakes, fire, etc.) \nFor your own safety and the safety of others, each student is expected to read and understand the \nguidelines \npublished at «http://prepare.fullerton.edu/campuspreparedness/ ». Should an emergency occur, \nfollow the \ninstructions given to you by faculty, staff, and public safety officials. An emergency information \nrecording is available by calling the Campus Operation and Emergency Closure line at 657- 278-\n4444.\n\nTentative Lecture Schedule \n\nA tentative schedule (\"subject to change\") for this class is shown below:"
+      },
+      {
+        "chunk_id": 17,
+        "pages": "4",
+        "distance": 0.521,
+        "text": "Student information for course syllabus \nhttps://fdc.fullerton.edu/teaching/student-info-syllabi.html \n\nTechnical Support \nIn case of technical problems with the learning management system, please contact the help desk \nat (657) 278-8888."
+      },
+      {
+        "chunk_id": 3,
+        "pages": "1",
+        "distance": 0.546,
+        "text": "Textbook, lecture notes, and course materials \n• No textbook is required. \n• Lecture notes and supplemental materials will be posted. \n\nImportant Dates \nCSUF’s Academic Calendar is posted online at «http://apps.fullerton.edu/AcademicCalendar/». \nThe Academic Calendar contains all the campus closures and holidays you should be aware of. \nCSUF’s Admissions Calendar is posted online at \n«http://admissions.fullerton.edu/apps/calendars.aspx». The Admissions Calendar contains all the \nmajor dates with respect to adding, dropping, and withdrawing from your classes. \nThe final exam schedule is at Final Exam Schedule - Scheduling Office | CSUF. Makeup exams \nare only available by advance request for documented exceptional circumstances."
+      },
+      {
+        "chunk_id": 13,
+        "pages": "3",
+        "distance": 0.5483,
+        "text": "AI Use Policy \nIn this course, the use of AI tools, such as Large Language Models (LLMs), is permitted or \nencouraged for completing assignments/projects, e.g., writing code and rephrasing short answers. \nHowever, you should understand any AI-generated code you submit and be able to demonstrate \nyour contribution to the assignment. No AI tools are allowed during exams unless otherwise \nstated, since exams are intended to evaluate your understanding of the material."
+      }
+    ],
+    "latency_s": 5.31,
+    "key_facts_found": "1/1"
+  }
+]
