@@ -18,3 +18,10 @@ langchain-text-splitters>=1.0
 langchain-chroma>=1.0
 chromadb>=1.0
 pypdf>=5.0
+
+# Part 4 (stt_rag.py, tts_rag.py)
+openai-whisper          # local STT (pulls in torch); model 'base' downloads ~140 MB on first use
+soundfile               # read WAV/AIFF of any bit depth without ffmpeg
+sounddevice             # microphone recording and audio playback
+SpeechRecognition       # optional Google Web Speech STT (--engine google)
+pyttsx3                 # offline TTS using the OS voices (pyobjc on macOS)

@@ -1,0 +1,18 @@
+==============================================================================
+Part 4 (1): Speech-to-text -> CPSC 254 syllabus RAG
+==============================================================================
+Input: part4-audio/question_grading_weights.wav (4.6 s, 16 kHz mono)
+STT engine: OpenAI Whisper 'base' (local, CPU)
+
+TRANSCRIPTION (1.2s):
+  "How is the final grade weighted between participation, assignments, and exams?"
+
+Reusing saved Chroma index: /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/chroma_syllabus/ (22 chunks, built 2026-11-23T23:23:02Z, embeddings 'qwen3-embedding')
+
+RAG RESULT:
+
+Q: How is the final grade weighted between participation, assignments, and exams?
+A: The final grade is weighted as follows: participation and attendance 7 %, assignments 43 %, and exams 50 % (total 100 %)【p. 3】.
+   Retrieved: p.3 (chunk 11, dist 0.196), p.2 (chunk 7, dist 0.364), p.3 (chunk 12, dist 0.393), p.2 (chunk 8, dist 0.421)   [3.1s]
+
+Timing: STT 1.2s + RAG 3.1s
