@@ -6,15 +6,16 @@ QUESTION: What are the instructor's office hours and where is the office?
 
 Reusing saved Chroma index: /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/chroma_syllabus/ (22 chunks, built 2026-11-23T23:23:02Z, embeddings 'qwen3-embedding')
 
-RAG ANSWER (5.3s, retrieved p.1, p.4, p.4-5, p.4):
-Instructor office hours are Monday and Wednesday 2:15 pm – 4:00 pm and 5:15 pm – 5:30 pm, or by Zoom appointment; the instructor’s office is in room CS‑421. [p. 1]
+RAG ANSWER (6.2s, retrieved p.1, p.4, p.4-5, p.4):
+Instructor office hours: Monday and Wednesday 2:15 pm – 4:00 pm and 5:15 pm – 5:30 pm, or by Zoom appointment.  
+Office location: CS‑421.  [p. 1]
 
 TEXT SENT TO TTS (citations/markdown removed):
-Instructor office hours are Monday and Wednesday 2:15 pm to 4:00 pm and 5:15 pm to 5:30 pm, or by Zoom appointment; the instructor’s office is in room CS-421.
+Instructor office hours: Monday and Wednesday 2:15 pm to 4:00 pm and 5:15 pm to 5:30 pm, or by Zoom appointment. Office location: CS-421.
 
-[TTS] pyttsx3, voice 'system default', rate 175 wpm -> results/tts_answer.aiff (11.8 s of audio, 514 KB, 2.5s)
+[TTS] pyttsx3, voice 'system default', rate 175 wpm -> results/tts_answer.aiff (12.1 s of audio, 527 KB, 2.4s)
 [PLAY] playing the spoken answer...
 [PLAY] finished (via sounddevice)
 
-[VERIFY] Whisper transcription of the generated speech (2.4s):
-  "Instructor office hours are Monday and Wednesday 2 15pm to 4pm and 515pm to 530pm or by Zoom appointment. The instructor's office is in room CS 421."
+[VERIFY] Whisper transcription of the generated speech (2.2s):
+  "Instructor Office Hours, Monday and Wednesday 2 15pm to 4pm and 515pm to 530pm or by Zoom appointment, Office Location, CS 421."

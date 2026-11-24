@@ -4,7 +4,7 @@ Part 4 (1): Speech-to-text -> CPSC 254 syllabus RAG
 Input: part4-audio/BRS_Speech_Priest_Prayer_Roomy.wav (29.6 s, 44100 Hz -> resampled to 16 kHz mono)
 STT engine: OpenAI Whisper 'base' (local, CPU)
 
-TRANSCRIPTION (2.0s):
+TRANSCRIPTION (1.8s):
   "We pray to thee our God this day, for the blessings you provide, but from ashes to ashes and from dust to dust so it must be. But keep this woman, O King of kings, be Nethial mighty wings. O God, the Spirit of all our joys, the cause of our delights, the glory of our darkest nights, and the comfort at times like these."
 
 Reusing saved Chroma index: /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/chroma_syllabus/ (22 chunks, built 2026-11-23T23:23:02Z, embeddings 'qwen3-embedding')
@@ -12,9 +12,9 @@ Reusing saved Chroma index: /Users/chrisalpuerto/Desktop/PROJECTS/cpsc254/hw4/ch
 RAG RESULT:
 
 Q: We pray to thee our God this day, for the blessings you provide, but from ashes to ashes and from dust to dust so it must be. But keep this woman, O King of kings, be Nethial mighty wings. O God, the Spirit of all our joys, the cause of our delights, the glory of our darkest nights, and the comfort at times like these.
-A: The syllabus does not contain enough information to answer this question. The syllabus provides details about the course topics, schedule, emergency policy, and technical support for CPSC 254.
-   Retrieved: p.5 (chunk 21, dist 0.680), p.4-5 (chunk 19, dist 0.688), p.4 (chunk 17, dist 0.690), p.5 (chunk 20, dist 0.698)   [6.5s]
+A: The syllabus does not contain enough information to answer this question. The syllabus provides details about course topics, schedules, and emergency policies, but does not address the content of your request.
+   Retrieved: p.5 (chunk 21, dist 0.682), p.4-5 (chunk 19, dist 0.689), p.4 (chunk 17, dist 0.691), p.5 (chunk 20, dist 0.699)   [5.0s]
 
 (The transcribed speech is not answerable from the syllabus, so the RAG application declined instead of inventing an answer.)
 
-Timing: STT 2.0s + RAG 6.5s
+Timing: STT 1.8s + RAG 5.0s
