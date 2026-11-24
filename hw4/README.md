@@ -58,5 +58,3 @@ Optional overrides: `NRP_BASE_URL`, `NRP_CHAT_MODEL`, `NRP_EMBED_MODEL`. Connect
 | 2 | `part2_output.txt`, `part2_predictions.csv`, `part2_comparison.md`. The Part 1 model is cached as `part1_best_model.joblib` (regenerated automatically if missing). |
 | 3 | `part3_eval_output.txt`, `part3_eval.json` |
 | 4 | `part4_stt_<audio>.txt`, `part4_tts_output.txt`, `tts_answer.aiff` |
-
-Written answers are in `part1_report.md`, `part2_3_report.md`, and `part4_report.md`.
